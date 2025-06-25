@@ -1,5 +1,16 @@
 #include <stdio.h>
 
+int sum(int a[], int size)
+{
+    int add = 0;
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d\t", a[i]);
+        add = a[i] + add;
+    }
+    return add;
+}
+
 void main()
 {
     // size input
@@ -16,12 +27,6 @@ void main()
     }
 
     // printf array
-    int add = 0;
-    for (int i = 0; i < size; i++)
-    {
-        printf("%d\t", a[i]);
-        add = a[i] + add;
-    }
 
-    printf("sum is %d\n", add);
+    printf("\n\nsum is %d\n", sum(a, size));
 }
